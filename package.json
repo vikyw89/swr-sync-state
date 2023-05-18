@@ -1,6 +1,6 @@
 {
   "name": "swr-sync-state",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SWR extension to enabled state management using SWR",
   "main": "./dist/index.js",
   "type": "module",
