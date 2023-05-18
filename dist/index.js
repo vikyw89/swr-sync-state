@@ -6,7 +6,7 @@ import useSWRImmutable from 'swr/immutable';
  * @returns
  */
 export const useSyncSWR = (key) => {
-    const state = useSWRImmutable.default(key);
+    const state = useSWRImmutable(key);
     return state.data;
 };
 /**

@@ -3,7 +3,7 @@
     "outDir": "./dist/",
     "declaration": true,
     "strict": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "lib": ["ESNext","DOM"],
     "target": "ES2015",
     "sourceMap": true,
