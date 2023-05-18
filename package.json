@@ -1,0 +1,53 @@
+{
+  "name": "swr-sync-state",
+  "version": "1.0.0",
+  "description": "SWR extension to enabled state management using SWR",
+  "main": "./dist/index.js",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "./dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "predev": "(git pull || echo 'proceed without git pull') && npm install",
+    "tsc": "tsc -p tsconfig.json --watch",
+    "test": "cd test && npm install && npm link .. && npm run dev",
+    "typedoc": "typedoc --watch",
+    "dev": "npm run tsc & npm run typedoc & npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikyw89/swr-sync-state.git"
+  },
+  "keywords": [
+    "SWR",
+    "state",
+    "manager",
+    "redux",
+    "zustand",
+    "use-sync-v",
+    "tanstack",
+    "query"
+  ],
+  "author": "https://github.com/vikyw89",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vikyw89/swr-sync-state/issues"
+  },
+  "homepage": "https://github.com/vikyw89/swr-sync-state#readme",
+  "devDependencies": {
+    "@tsconfig/esm": "^1.0.3",
+    "@types/react": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "eslint": "^8.40.0",
+    "typedoc": "^0.24.7",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "swr": "^2.1.5"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "declaration": true,
+    "strict": true,
+    "moduleResolution": "nodenext",
+    "lib": ["ESNext","DOM"],
+    "target": "ES2015",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["./src"],
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true
+  },
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": "./docs",
+    "plugin":["./typedoc-plugin-default-value.js"]
+  },
+  "extends": "@tsconfig/esm/tsconfig.json"
+}
