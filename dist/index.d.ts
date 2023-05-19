@@ -1,10 +1,9 @@
 /**
  *
  * @param key Key for SWR
- * @param initialState Initialstate value
  * @returns
  */
-export declare const useSyncSWR: (key: string, initialState: unknown) => unknown;
+export declare const useSyncSWR: (key: string) => unknown;
 /**
  *
  * @param key - Key for SWR

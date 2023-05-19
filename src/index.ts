@@ -4,11 +4,10 @@ import useSWRImmutable from 'swr/immutable'
 /**
  * 
  * @param key Key for SWR
- * @param initialState Initialstate value
  * @returns 
  */
-export const useSyncSWR = (key: string, initialState: unknown) => {
-    const state = useSWRImmutable(key, async () => initialState)
+export const useSyncSWR = (key: string) => {
+    const state = useSWRImmutable(key, async () => undefined)
     return state.data as unknown
 }
 
