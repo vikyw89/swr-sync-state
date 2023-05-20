@@ -16,7 +16,7 @@ export const useSyncSWR = (key: string) => {
  * @param key - Key for SWR
  * @param value - Value to set, can be a function that receive previous value as arg, or a value
  */
-export const setSyncSWR = (key: string, value: (unknown | ((previous: unknown) => unknown))) => {
+export const setSyncSWR = async (key: string, value: (unknown | ((previous: unknown) => unknown))) => {
     const updaterFn = (c: unknown, p: unknown) => {
         if (typeof value === 'function') {
             return value(p) as unknown

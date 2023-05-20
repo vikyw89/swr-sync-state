@@ -17,7 +17,7 @@ export const SomeComponent = () => {
   const state = useSyncSWR(key) ?? 0;
 
   const incrementHandler = () => {
-    setSyncSWR(key, (p) => p + 1);
+    setSyncSWR(key, (p) => (p ?? 0) + 1);
   };
 
   return (

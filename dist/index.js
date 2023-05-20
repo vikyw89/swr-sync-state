@@ -23,7 +23,7 @@ export const useSyncSWR = (key) => {
  * @param key - Key for SWR
  * @param value - Value to set, can be a function that receive previous value as arg, or a value
  */
-export const setSyncSWR = (key, value) => {
+export const setSyncSWR = (key, value) => __awaiter(void 0, void 0, void 0, function* () {
     const updaterFn = (c, p) => {
         if (typeof value === 'function') {
             return value(p);
@@ -33,5 +33,5 @@ export const setSyncSWR = (key, value) => {
         }
     };
     mutate(key, undefined, { populateCache: updaterFn, revalidate: false });
-};
+});
 //# sourceMappingURL=index.js.map
